@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.erts</groupId>
+	<artifactId>er-trading-system</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>ER Trading System</name>
+
+	<developers>
+		<developer>
+			<name>Edward Pan</name>
+			<email>almar1701@hotmail.com</email>
+			<roles>
+				<role>Maintainer</role>
+			</roles>
+		</developer>
+		<developer>
+			<name>Ricky Shi</name>
+			<email>ricky.shiyouping@gmail.com</email>
+			<roles>
+				<role>Maintainer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<!-- Core properties -->
+		<java.version>1.8</java.version>
+		<maven.version>3.6.1</maven.version>
+		<m2e.apt.activation>jdt_apt</m2e.apt.activation>
+		<generated.sources>${project.build.directory}/generated-sources/java</generated.sources>
+		<generated.test.sources>${project.build.directory}/generated-test-sources/java</generated.test.sources>
+
+		<!-- Dependency properties -->
+		<guava.version>27.1-jre</guava.version>
+		<lombok.version>1.18.8</lombok.version>
+		<guice.version>4.2.2</guice.version>
+		<quickfix.version>2.1.1</quickfix.version>
+		<testng.version>6.14.3</testng.version>
+		<mockito.version>2.27.0</mockito.version>
+		<powermock.version>2.0.2</powermock.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>${guava.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.inject</groupId>
+			<artifactId>guice</artifactId>
+			<version>${guice.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.quickfixj</groupId>
+			<artifactId>quickfixj-core</artifactId>
+			<version>${quickfix.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-module-testng</artifactId>
+			<version>${powermock.version}</version>
+			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
