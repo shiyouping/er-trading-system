@@ -34,8 +34,10 @@
 		<generated.test.sources>${project.build.directory}/generated-test-sources/java</generated.test.sources>
 
 		<!-- Dependency properties -->
-		<guava.version>27.1-jre</guava.version>
+		<yaml.version>1.24</yaml.version>
 		<lombok.version>1.18.8</lombok.version>
+		<logback.version>1.2.3</logback.version>
+		<guava.version>27.1-jre</guava.version>
 		<guice.version>4.2.2</guice.version>
 		<quickfix.version>2.1.1</quickfix.version>
 		<testng.version>6.14.3</testng.version>
@@ -44,6 +46,20 @@
 	</properties>
 
 	<dependencies>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.yaml</groupId>
+			<artifactId>snakeyaml</artifactId>
+			<version>${yaml.version}</version>
+		</dependency>
+
 		<dependency>
 			<groupId>com.google.guava</groupId>
 			<artifactId>guava</artifactId>
@@ -57,10 +73,9 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
-			<scope>provided</scope>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
 		</dependency>
 
 		<dependency>
