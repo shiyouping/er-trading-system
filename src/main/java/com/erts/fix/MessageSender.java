@@ -1,29 +1,27 @@
 package com.erts.fix;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
 import javax.annotation.Nonnull;
 
+import com.erts.exception.InvalidCounterPartyException;
+
 import quickfix.Message;
-import quickfix.Session;
 import quickfix.SessionID;
-import quickfix.SessionNotFound;
 
 /**
- * @author Ricky Shi
+ * @author <a href="mailto:ricky.shiyouping@gmail.com">Ricky Shi</a>
  *
- * @since 6 Jun 2019
+ * @since Jun 7, 2019
  */
-public class MessageSender {
+public interface MessageSender {
 
-	public void sendMessage(@Nonnull SessionID sessionId, @Nonnull Message message) {
-		checkNotNull(sessionId, "sessionId cannot be null");
-		checkNotNull(message, "message cannot be null");
-
-		Session session = Session.lookupSession(sessionId);
-		if (session == null) {
-			throw new SessionNotFound(sessionId.toString());
-		}
-
-	}
+	/**
+	 * 
+	 * Send a FIX message to the given counter party
+	 * 
+	 * @param counterPartyId A String representative of {@link SessionID}
+	 * @param message        A FIX message
+	 * @throws InvalidCounterPartyException Cannot find a counter party associated
+	 *                                      with the given counterPartyId
+	 */
+	void sendMessage(@Nonnull String counterPartyId, @Nonnull Message message) throws InvalidCounterPartyException;
 }

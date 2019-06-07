@@ -8,9 +8,9 @@ import org.yaml.snakeyaml.constructor.Constructor;
 import lombok.Data;
 
 /**
- * @author Ricky Shi
+ * @author <a href="mailto:ricky.shiyouping@gmail.com">Ricky Shi</a>
  *
- * @since 6 Jun 2019
+ * @since Jun 7, 2019
  */
 @Data
 public class AppConfig {

@@ -8,11 +8,11 @@ import quickfix.SessionID;
 import quickfix.UnsupportedMessageType;
 
 /**
- * @author Ricky Shi
+ * @author <a href="mailto:ricky.shiyouping@gmail.com">Ricky Shi</a>
  *
- * @since 6 Jun 2019
+ * @since Jun 7, 2019
  */
-public class MessageReceiver extends MessageCracker {
+public class MessageReceiverImpl extends MessageCracker {
 
 	@Override
 	protected void onMessage(Message message, SessionID sessionID)

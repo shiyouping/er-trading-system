@@ -20,18 +20,18 @@ import quickfix.SessionID;
 import quickfix.UnsupportedMessageType;
 
 /**
- * @author Ricky Shi
+ * @author <a href="mailto:ricky.shiyouping@gmail.com">Ricky Shi</a>
  *
- * @since 6 Jun 2019
+ * @since Jun 7, 2019
  */
 public class FixApp implements Application {
 
 	private static final Logger logger = LoggerFactory.getLogger(FixApp.class);
 
-	private final MessageReceiver messageReceiver;
+	private final MessageReceiverImpl messageReceiver;
 
 	@Inject
-	public FixApp(@Nonnull MessageReceiver messageReceiver) {
+	public FixApp(@Nonnull MessageReceiverImpl messageReceiver) {
 		checkNotNull(messageReceiver, "messageReceiver cannot be null");
 		this.messageReceiver = messageReceiver;
 	}

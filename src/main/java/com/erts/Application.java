@@ -4,9 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * @author Ricky Shi
+ * @author <a href="mailto:ricky.shiyouping@gmail.com">Ricky Shi</a>
  *
- * @since 6 Jun 2019
+ * @since Jun 7, 2019
  */
 public class Application {
 
