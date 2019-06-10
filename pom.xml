@@ -80,7 +80,7 @@
 
 		<dependency>
 			<groupId>org.quickfixj</groupId>
-			<artifactId>quickfixj-core</artifactId>
+			<artifactId>quickfixj-all</artifactId>
 			<version>${quickfix.version}</version>
 		</dependency>
 

@@ -24,14 +24,14 @@ import quickfix.UnsupportedMessageType;
  *
  * @since Jun 7, 2019
  */
-public class FixApp implements Application {
+public class FixApplication implements Application {
 
-	private static final Logger logger = LoggerFactory.getLogger(FixApp.class);
+	private static final Logger logger = LoggerFactory.getLogger(FixApplication.class);
 
-	private final MessageReceiverImpl messageReceiver;
+	private final MessageReceiver messageReceiver;
 
 	@Inject
-	public FixApp(@Nonnull MessageReceiverImpl messageReceiver) {
+	public FixApplication(@Nonnull MessageReceiver messageReceiver) {
 		checkNotNull(messageReceiver, "messageReceiver cannot be null");
 		this.messageReceiver = messageReceiver;
 	}

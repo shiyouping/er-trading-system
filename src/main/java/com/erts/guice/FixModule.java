@@ -1,7 +1,13 @@
 package com.erts.guice;
 
-import com.erts.fix.FixApp;
+import com.erts.fix.FixApplication;
+import com.erts.fix.FixServer;
+import com.erts.fix.FixServerImpl;
+import com.erts.fix.MessageReceiver;
+import com.erts.fix.MessageSender;
+import com.erts.fix.MessageSenderImpl;
 import com.google.inject.AbstractModule;
+import com.google.inject.Scopes;
 
 import quickfix.Application;
 
@@ -14,6 +20,9 @@ public class FixModule extends AbstractModule {
 
 	@Override
 	protected void configure() {
-		bind(Application.class).to(FixApp.class);
+		bind(FixServer.class).to(FixServerImpl.class).in(Scopes.SINGLETON);
+		bind(Application.class).to(FixApplication.class);
+		bind(MessageSender.class).to(MessageSenderImpl.class);
+		bind(MessageReceiver.class);
 	}
 }

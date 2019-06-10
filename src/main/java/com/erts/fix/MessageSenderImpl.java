@@ -2,7 +2,7 @@ package com.erts.fix;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import com.erts.exception.InvalidCounterPartyException;
+import com.erts.exception.FixCounterPartyException;
 
 import quickfix.Message;
 import quickfix.Session;
@@ -16,7 +16,7 @@ import quickfix.SessionID;
 public class MessageSenderImpl implements MessageSender {
 
 	@Override
-	public void sendMessage(String counterPartyId, Message message) throws InvalidCounterPartyException {
+	public void sendMessage(String counterPartyId, Message message) throws FixCounterPartyException {
 		checkNotNull(counterPartyId, "counterPartyId cannot be null");
 		checkNotNull(message, "message cannot be null");
 
@@ -24,7 +24,7 @@ public class MessageSenderImpl implements MessageSender {
 		Session session = Session.lookupSession(sessionId);
 
 		if (session == null) {
-			throw new InvalidCounterPartyException(
+			throw new FixCounterPartyException(
 					String.format("No Session found for counter party ID %s", counterPartyId));
 		}
 	}

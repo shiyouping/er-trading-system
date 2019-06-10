@@ -2,7 +2,7 @@ package com.erts.fix;
 
 import javax.annotation.Nonnull;
 
-import com.erts.exception.InvalidCounterPartyException;
+import com.erts.exception.FixCounterPartyException;
 
 import quickfix.Message;
 import quickfix.SessionID;
@@ -20,8 +20,8 @@ public interface MessageSender {
 	 * 
 	 * @param counterPartyId A String representative of {@link SessionID}
 	 * @param message        A FIX message
-	 * @throws InvalidCounterPartyException Cannot find a counter party associated
+	 * @throws FixCounterPartyException Cannot find a counter party associated
 	 *                                      with the given counterPartyId
 	 */
-	void sendMessage(@Nonnull String counterPartyId, @Nonnull Message message) throws InvalidCounterPartyException;
+	void sendMessage(@Nonnull String counterPartyId, @Nonnull Message message) throws FixCounterPartyException;
 }
