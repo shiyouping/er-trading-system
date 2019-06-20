@@ -39,19 +39,16 @@ public class FixApplication implements Application {
 	@Override
 	public void onCreate(SessionID sessionId) {
 		logger.info("A new session is created. Session={}", sessionId);
-
 	}
 
 	@Override
 	public void onLogon(SessionID sessionId) {
 		logger.info("The counter party logged on. Session={}", sessionId);
-
 	}
 
 	@Override
 	public void onLogout(SessionID sessionId) {
 		logger.info("The counter party logged out. Session={}", sessionId);
-
 	}
 
 	@Override

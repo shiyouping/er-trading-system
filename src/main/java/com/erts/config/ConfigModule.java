@@ -1,6 +1,5 @@
-package com.erts.guice;
+package com.erts.config;
 
-import com.erts.config.AppConfig;
 import com.google.inject.AbstractModule;
 
 /**
@@ -12,6 +11,7 @@ public class ConfigModule extends AbstractModule {
 
 	@Override
 	protected void configure() {
+		// AppConfig scope is controlled by itself
 		bind(AppConfig.class).toInstance(AppConfig.getInstance());
 	}
 }

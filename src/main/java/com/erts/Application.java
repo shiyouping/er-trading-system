@@ -3,9 +3,9 @@ package com.erts;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.erts.config.ConfigModule;
 import com.erts.fix.FixServer;
-import com.erts.guice.ConfigModule;
-import com.erts.guice.FixModule;
+import com.erts.fix.guice.FixModule;
 import com.google.inject.Guice;
 
 /**

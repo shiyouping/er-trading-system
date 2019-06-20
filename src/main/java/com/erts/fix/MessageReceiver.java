@@ -16,6 +16,5 @@ public class MessageReceiver extends MessageCracker {
 
 	protected void onMessage(NewOrderSingle message, SessionID sessionID)
 			throws FieldNotFound, UnsupportedMessageType, IncorrectTagValue {
-
 	}
 }

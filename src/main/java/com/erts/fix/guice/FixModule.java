@@ -1,4 +1,4 @@
-package com.erts.guice;
+package com.erts.fix.guice;
 
 import com.erts.fix.FixApplication;
 import com.erts.fix.FixServer;
@@ -21,7 +21,7 @@ public class FixModule extends AbstractModule {
 	@Override
 	protected void configure() {
 		bind(FixServer.class).to(FixServerImpl.class).in(Scopes.SINGLETON);
-		bind(Application.class).to(FixApplication.class);
+		bind(Application.class).to(FixApplication.class).in(Scopes.SINGLETON);
 		bind(MessageSender.class).to(MessageSenderImpl.class);
 		bind(MessageReceiver.class);
 	}
