@@ -27,7 +27,7 @@
 		<generated.test.sources>${project.build.directory}/generated-test-sources/java</generated.test.sources>
 
 		<!-- Dependency properties -->
-		<yaml.version>1.24</yaml.version>
+		<yaml.version>1.26</yaml.version>
 		<lombok.version>1.18.8</lombok.version>
 		<logback.version>1.2.3</logback.version>
 		<guava.version>27.1-jre</guava.version>
